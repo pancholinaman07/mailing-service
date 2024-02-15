@@ -2,9 +2,6 @@ const nodemailer = require('nodemailer');
 
 async function sendMail(data) {
     try {
-        console.log(process.env.SERVICE);
-        console.log(process.env.USERMAIL);
-        console.log(process.env.PASS);
         const client = nodemailer.createTransport({
             service: process.env.SERVICE,
             auth: {
