@@ -7,14 +7,14 @@ const emailQueue = new Queue('email-queue', {
     }
 });
 
-async function init() {
-    const res = await emailQueue.add('email to nehal', {
-        from: "pancholinaman0@gmail.com",
-        to: "20uec083@lnmiit.ac.in",
-        subject: "Dear nehal",
-        text: "Congratulations for having such a lovely boyfriend"
-    });
+async function init(name, data) {
+    const res = await emailQueue.add(name, data);
     console.log(res.id);
 }
 
-init();
+init('email-to-someone', {
+    "from": "x@gmail.com",
+    "to": "y@gmail.com",
+    "subject": "regarding",
+    "body": "hello from here",
+}).then(r => console.log("done"));

@@ -15,8 +15,6 @@ async function sendMail(data) {
         console.log('Email sent successfully.');
     } catch (error) {
         console.error('Error sending email:', error);
-        // You can choose to throw the error or handle it in a different way,
-        // depending on your application's requirements.
         throw error;
     }
 }
